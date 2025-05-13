@@ -15,7 +15,7 @@ C:/Users/aaron/Documents/GitHub/Future-Alien-Drug-Game/Future-Alien-Drug-Game
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-53712
+58432
 -job-worker-count
 5
 -background-job-worker-count
@@ -58,12 +58,12 @@ C:/Users/aaron/Documents/GitHub/Future-Alien-Drug-Game/Future-Alien-Drug-Game
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [13876] Host "[IP] 192.168.0.173 [Port] 0 [Flags] 2 [Guid] 346148561 [EditorId] 346148561 [Version] 1048832 [Id] WindowsEditor(7,Aaron-pc2) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
-Player connection [13876] Host "[IP] 192.168.0.173 [Port] 0 [Flags] 2 [Guid] 346148561 [EditorId] 346148561 [Version] 1048832 [Id] WindowsEditor(7,Aaron-pc2) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [26096] Host "[IP] 192.168.0.173 [Port] 0 [Flags] 2 [Guid] 1697897017 [EditorId] 1697897017 [Version] 1048832 [Id] WindowsEditor(7,Aaron-pc2) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [26096] Host "[IP] 192.168.0.173 [Port] 0 [Flags] 2 [Guid] 1697897017 [EditorId] 1697897017 [Version] 1048832 [Id] WindowsEditor(7,Aaron-pc2) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 5
 [Physics::Module] Initialized MultithreadedJobDispatcher with 5 workers.
 Library Redirect Path: Library/
-Refreshing native plugins compatible for Editor in 1.62 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 88.67 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2023.2.4f1 (accd6d46ced1)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2023.2.4f1/Editor/Data/Resources/UnitySubsystems
@@ -79,7 +79,7 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2023.2.4f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2023.2.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2023.2.4f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56680
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56516
 Begin MonoManager ReloadAssembly
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
@@ -93,41 +93,41 @@ C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2023.2.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.004242 seconds.
-- Loaded All Assemblies, in  0.459 seconds
+Registered in 0.107789 seconds.
+- Loaded All Assemblies, in  8.598 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-- Finished resetting the current domain, in  0.392 seconds
-Domain Reload Profiling: 848ms
-	BeginReloadAssembly (152ms)
+- Finished resetting the current domain, in  0.330 seconds
+Domain Reload Profiling: 8926ms
+	BeginReloadAssembly (7216ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (42ms)
-	RebuildNativeTypeToScriptingClass (16ms)
-	initialDomainReloadingComplete (60ms)
-	LoadAllAssembliesAndSetupDomain (186ms)
-		LoadAssemblies (147ms)
+	RebuildCommonClasses (409ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (155ms)
+	LoadAllAssembliesAndSetupDomain (806ms)
+		LoadAssemblies (7211ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (183ms)
-			TypeCache.Refresh (182ms)
-				TypeCache.ScanAssembly (169ms)
+		AnalyzeDomain (803ms)
+			TypeCache.Refresh (801ms)
+				TypeCache.ScanAssembly (533ms)
 			BuildScriptInfoCaches (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (392ms)
+	FinalizeReload (330ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (324ms)
+		SetupLoadedEditorAssemblies (277ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (11ms)
-			SetLoadedEditorAssemblies (7ms)
-			BeforeProcessingInitializeOnLoad (8ms)
-			ProcessInitializeOnLoadAttributes (235ms)
-			ProcessInitializeOnLoadMethodAttributes (64ms)
+			InitializePlatformSupportModulesInManaged (12ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (7ms)
+			ProcessInitializeOnLoadAttributes (197ms)
+			ProcessInitializeOnLoadMethodAttributes (55ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -150,214 +150,114 @@ C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
 Symbol file LoadedFromMemory doesn't match image C:\Users\aaron\Documents\GitHub\Future-Alien-Drug-Game\Future-Alien-Drug-Game\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\aaron\Documents\GitHub\Future-Alien-Drug-Game\Future-Alien-Drug-Game\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  1.052 seconds
-Refreshing native plugins compatible for Editor in 1.40 ms, found 3 plugins.
+- Loaded All Assemblies, in  7.347 seconds
+Refreshing native plugins compatible for Editor in 0.71 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.907 seconds
-Domain Reload Profiling: 1951ms
-	BeginReloadAssembly (365ms)
+- Finished resetting the current domain, in  1.055 seconds
+Domain Reload Profiling: 8395ms
+	BeginReloadAssembly (367ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (6ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (41ms)
-	RebuildCommonClasses (42ms)
-	RebuildNativeTypeToScriptingClass (13ms)
-	initialDomainReloadingComplete (47ms)
-	LoadAllAssembliesAndSetupDomain (577ms)
-		LoadAssemblies (472ms)
+		CreateAndSetChildDomain (43ms)
+	RebuildCommonClasses (39ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (44ms)
+	LoadAllAssembliesAndSetupDomain (6879ms)
+		LoadAssemblies (6375ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (218ms)
-			TypeCache.Refresh (172ms)
-				TypeCache.ScanAssembly (158ms)
-			BuildScriptInfoCaches (33ms)
-			ResolveRequiredComponents (11ms)
-	FinalizeReload (907ms)
+		AnalyzeDomain (609ms)
+			TypeCache.Refresh (564ms)
+				TypeCache.ScanAssembly (497ms)
+			BuildScriptInfoCaches (34ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (1055ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (642ms)
+		SetupLoadedEditorAssemblies (565ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (2ms)
-			SetLoadedEditorAssemblies (6ms)
-			BeforeProcessingInitializeOnLoad (145ms)
-			ProcessInitializeOnLoadAttributes (440ms)
-			ProcessInitializeOnLoadMethodAttributes (40ms)
-			AfterProcessingInitializeOnLoad (8ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (109ms)
+			ProcessInitializeOnLoadAttributes (406ms)
+			ProcessInitializeOnLoadMethodAttributes (37ms)
+			AfterProcessingInitializeOnLoad (6ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (6ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
-Refreshing native plugins compatible for Editor in 1.19 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (5ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
+Refreshing native plugins compatible for Editor in 0.94 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 187 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 5296 unused Assets / (5.0 MB). Loaded Objects now: 5979.
-Memory consumption went from 176.9 MB to 171.9 MB.
-Total: 7.480600 ms (FindLiveObjects: 0.642600 ms CreateObjectMapping: 0.263700 ms MarkObjects: 4.166100 ms  DeleteObjects: 2.407500 ms)
-
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-Symbol file LoadedFromMemory doesn't match image C:\Users\aaron\Documents\GitHub\Future-Alien-Drug-Game\Future-Alien-Drug-Game\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\aaron\Documents\GitHub\Future-Alien-Drug-Game\Future-Alien-Drug-Game\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  0.630 seconds
-Refreshing native plugins compatible for Editor in 0.95 ms, found 3 plugins.
-Native extension for WindowsStandalone target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.783 seconds
-Domain Reload Profiling: 1412ms
-	BeginReloadAssembly (180ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (4ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (48ms)
-	RebuildCommonClasses (30ms)
-	RebuildNativeTypeToScriptingClass (12ms)
-	initialDomainReloadingComplete (27ms)
-	LoadAllAssembliesAndSetupDomain (379ms)
-		LoadAssemblies (337ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (128ms)
-			TypeCache.Refresh (5ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (111ms)
-			ResolveRequiredComponents (10ms)
-	FinalizeReload (783ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (576ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (2ms)
-			SetLoadedEditorAssemblies (6ms)
-			BeforeProcessingInitializeOnLoad (120ms)
-			ProcessInitializeOnLoadAttributes (403ms)
-			ProcessInitializeOnLoadMethodAttributes (35ms)
-			AfterProcessingInitializeOnLoad (10ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (18ms)
-Refreshing native plugins compatible for Editor in 1.19 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 5294 unused Assets / (4.9 MB). Loaded Objects now: 5980.
-Memory consumption went from 150.2 MB to 145.3 MB.
-Total: 7.896200 ms (FindLiveObjects: 0.587700 ms CreateObjectMapping: 0.302600 ms MarkObjects: 4.480800 ms  DeleteObjects: 2.524500 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
-Symbol file LoadedFromMemory doesn't match image C:\Users\aaron\Documents\GitHub\Future-Alien-Drug-Game\Future-Alien-Drug-Game\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\aaron\Documents\GitHub\Future-Alien-Drug-Game\Future-Alien-Drug-Game\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  0.685 seconds
-Refreshing native plugins compatible for Editor in 0.77 ms, found 3 plugins.
-Native extension for WindowsStandalone target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.731 seconds
-Domain Reload Profiling: 1413ms
-	BeginReloadAssembly (179ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (4ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (45ms)
-	RebuildCommonClasses (31ms)
-	RebuildNativeTypeToScriptingClass (12ms)
-	initialDomainReloadingComplete (35ms)
-	LoadAllAssembliesAndSetupDomain (425ms)
-		LoadAssemblies (354ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (161ms)
-			TypeCache.Refresh (6ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (143ms)
-			ResolveRequiredComponents (10ms)
-	FinalizeReload (731ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (528ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (2ms)
-			SetLoadedEditorAssemblies (6ms)
-			BeforeProcessingInitializeOnLoad (122ms)
-			ProcessInitializeOnLoadAttributes (354ms)
-			ProcessInitializeOnLoadMethodAttributes (36ms)
-			AfterProcessingInitializeOnLoad (7ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (16ms)
-Refreshing native plugins compatible for Editor in 0.79 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 23 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 5294 unused Assets / (5.2 MB). Loaded Objects now: 5980.
-Memory consumption went from 151.9 MB to 146.7 MB.
-Total: 7.359500 ms (FindLiveObjects: 0.800000 ms CreateObjectMapping: 0.696300 ms MarkObjects: 3.464600 ms  DeleteObjects: 2.397900 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 163564.665178 seconds.
-  path: Assets/Sand.mat
-  artifactKey: Guid(4336e32e554bf4d4ba860f866158316a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sand.mat using Guid(4336e32e554bf4d4ba860f866158316a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e385069f07447e5257e5c27a78905e90') in 0.2991205 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 35
+Unloading 188 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 5297 unused Assets / (5.4 MB). Loaded Objects now: 5981.
+Memory consumption went from 177.6 MB to 172.2 MB.
+Total: 9.027900 ms (FindLiveObjects: 0.643500 ms CreateObjectMapping: 1.370000 ms MarkObjects: 3.877200 ms  DeleteObjects: 3.136300 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 30.951627 seconds.
-  path: Assets/imgonline-com-ua-TextureSeamless-HDHfSEN6vuSy1.png
-  artifactKey: Guid(9eef5aca90433fd48a0d4cfb77a4281f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/imgonline-com-ua-TextureSeamless-HDHfSEN6vuSy1.png using Guid(9eef5aca90433fd48a0d4cfb77a4281f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4790599667abe7f24c525964560eafae') in 0.0245701 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+  Time since last request: 868932.369648 seconds.
+  path: Assets/Prefab/Glarp Cactus Seed.prefab
+  artifactKey: Guid(3d84735dedec3af4eb607d0e249b12c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Glarp Cactus Seed.prefab using Guid(3d84735dedec3af4eb607d0e249b12c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '32528125c56e2078047f59e45c9febf0') in 0.3524461 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 48
+
+========================================================================
+Received Import Request.
+  Time since last request: 1083.261027 seconds.
+  path: Assets/Prefab/Hook.prefab
+  artifactKey: Guid(8422c55f808e201469accc4f6e42be3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Hook.prefab using Guid(8422c55f808e201469accc4f6e42be3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '27e83ce6f2736d988caf7abde4a286b8') in 0.0549752 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 39
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Prefab/Van 1.prefab
+  artifactKey: Guid(a83389aaac09e2540a2cc801c630280d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Van 1.prefab using Guid(a83389aaac09e2540a2cc801c630280d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bfd6a5f05c6cb2d56b403263b19e4582') in 0.0365566 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 41
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000034 seconds.
-  path: Assets/Untitled_design_-_2024-08-18T162952.978-removebg-preview.png
-  artifactKey: Guid(3545c027a842a6b4bb4e845eb0f82ebb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Untitled_design_-_2024-08-18T162952.978-removebg-preview.png using Guid(3545c027a842a6b4bb4e845eb0f82ebb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3b809f191accbd887c5bbe0df39d2bbb') in 0.0206757 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+  path: Assets/Prefab/Plate 1.prefab
+  artifactKey: Guid(17263e385728275489a5e3075f7f5099) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Plate 1.prefab using Guid(17263e385728275489a5e3075f7f5099) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '32d995815a0ba9efa80fdb8a74b691d0') in 0.0210639 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 41
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/Stangz__12_-removebg-preview.png
-  artifactKey: Guid(de19ea2705e5b03489c932ea1dad245d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Stangz__12_-removebg-preview.png using Guid(de19ea2705e5b03489c932ea1dad245d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'aadd26b5477951f25e8de51c78345a2a') in 0.0156469 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+  Time since last request: 0.000026 seconds.
+  path: Assets/Prefab/Platform 1v1.prefab
+  artifactKey: Guid(93b435c2f608e124ba5d93ddf7ac118d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Platform 1v1.prefab using Guid(93b435c2f608e124ba5d93ddf7ac118d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f8e5a52e05831c0f56f0b2beac15ffab') in 0.021021 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 41
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Stangz__13_-removebg-preview.png
-  artifactKey: Guid(491067e18e540e647876bf4eeb54086a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Stangz__13_-removebg-preview.png using Guid(491067e18e540e647876bf4eeb54086a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd8de367270cc2e6556884981270f8659') in 0.0159602 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+  Time since last request: 0.000029 seconds.
+  path: Assets/Prefab/Stairs.prefab
+  artifactKey: Guid(8832ef33e0b094c4c80fef42326250d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Stairs.prefab using Guid(8832ef33e0b094c4c80fef42326250d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '752c273050990f0fd49ab2b251ac5e6a') in 0.019598 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 43
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000065 seconds.
+  path: Assets/Prefab/plate 2.prefab
+  artifactKey: Guid(1436ce1a42407cd4abfec1e71257d9cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/plate 2.prefab using Guid(1436ce1a42407cd4abfec1e71257d9cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0888249a44be323f3adb3b490a70cda2') in 0.0235567 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 41
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Prefab/Platform 1v1.5.prefab
+  artifactKey: Guid(b7ebc5dcf0eb8fa43bbec87767cc53ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Platform 1v1.5.prefab using Guid(b7ebc5dcf0eb8fa43bbec87767cc53ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c148239962610722c941f1570c376aac') in 0.0246948 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 41
 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
