@@ -7,21 +7,26 @@ public class MainManager : MonoBehaviour
     public int Cash;
     public int Credit;
 
-    public int SnuzzlefernSeed;
-    public int ThwackrootSeed;
-    public int GlarpCactusSeed;
+    public int CronaSeed;
+    public int TwertaSeed;
+    public int PlaronSeed;
 
-    public int Snuzzlefern;
-    public int Thwackroot;
-    public int GlarpCactus;
+    public int Cronalean;
+    public int Twertapop;
+    public int Plaronloss;
+
+    public int BottledCronalean;
+    public int BottledTwertapop;
+    public int BottledPlaronloss;
 
     public int Bottle;
 
-    public int SeedStorage;
-    public int FruitStorage;
-    public int WeaponLocker;
+    public int GrowingPlot;
+    public int HydroPlot;
 
-    public int Planter;
+    public int GrowingFrameLowLight;
+    public int GrowingFrameHighLight;
+
     public int Squashor;
     public int Radiator;
 

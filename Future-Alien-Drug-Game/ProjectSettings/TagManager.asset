@@ -3,7 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Bottle
+  - CronaSeed
+  - TwertaSeed
+  - PlaronSeed
+  - Cronalean
+  - Twertapop
+  - Plaronloss
+  - BottledCronalean
+  - BottledTwertapop
+  - BottledPlaronloss
   layers:
   - Default
   - TransparentFX

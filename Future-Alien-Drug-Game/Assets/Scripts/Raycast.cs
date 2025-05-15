@@ -117,6 +117,23 @@ public class Raycast : MonoBehaviour
                 }
             }
 
+            if (Interactable.value == (1 << hit.collider.gameObject.layer))
+            {
+
+                Grower G = hit.collider.GetComponent<Grower>();
+                if (G != null)
+                {
+                    if (Input.GetKeyDown(KeyCode.E))
+                    {
+                        if (hit.distance < G.Range)
+                        {
+                            Debug.Log("Open");
+                            G.Plant();
+                        }
+                    }
+                }
+            }
+
             if (Collectable.value == (1 << hit.collider.gameObject.layer))
             {
 
@@ -133,6 +150,7 @@ public class Raycast : MonoBehaviour
                     }
                 }
             }
+
         }
     }
 }

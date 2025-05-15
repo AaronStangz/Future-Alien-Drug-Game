@@ -11,21 +11,20 @@ public class Collect : MonoBehaviour
     [Space]
     public int pickUpRange;
     [Space]
-    public int GiveSnuzzlefern;
-    public int GiveThwackroot;
-    public int GiveGlarpCactus;
+    public int GiveCronaSeed;
+    public int GiveTwertaSeed;
+    public int GivePlaronSeed;
     [Space]
-    public int GiveSnuzzlefernSeed;
-    public int GiveThwackrootSeed;
-    public int GiveGlarpCactusSeed;
+    public int GiveCronalean;
+    public int GiveTwertapop;
+    public int GivePlaronloss;
+    [Space]
+    public int GiveBottledCronalean;
+    public int GiveBottledTwertapop;
+    public int GiveBottledPlaronloss;
     [Space]
     public int GiveBottle;
     [Space]
-    public int GiveSeedStorage;
-    public int GiveFruitStorage;
-    public int GiveWeaponLocker;
-    [Space]
-    public int GivePlanter;
     public int GiveSquashor;
     public int GiveRadiator;
 
@@ -44,21 +43,20 @@ public class Collect : MonoBehaviour
     void MyFunctionToRunOnce()
     {
         if (MM.Space <= MM.MaxSpace) { MM.Space += 1; }
-        if (MM.Space <= MM.MaxSpace) { MM.Snuzzlefern += GiveSnuzzlefern; Destroy(gameObject); }
-        if (MM.Space <= MM.MaxSpace) { MM.Thwackroot += GiveThwackroot; Destroy(gameObject); }
-        if (MM.Space <= MM.MaxSpace) { MM.GlarpCactus += GiveGlarpCactus; Destroy(gameObject); }
+        if (MM.Space <= MM.MaxSpace) { MM.CronaSeed += GiveCronaSeed; Destroy(gameObject); }
+        if (MM.Space <= MM.MaxSpace) { MM.TwertaSeed += GiveTwertaSeed; Destroy(gameObject); }
+        if (MM.Space <= MM.MaxSpace) { MM.PlaronSeed += GivePlaronSeed; Destroy(gameObject); }
 
-        if (MM.Space <= MM.MaxSpace) { MM.SnuzzlefernSeed += GiveSnuzzlefernSeed;  Destroy(gameObject); }
-        if (MM.Space <= MM.MaxSpace) { MM.ThwackrootSeed += GiveThwackrootSeed; Destroy(gameObject); }
-        if (MM.Space <= MM.MaxSpace) { MM.GlarpCactusSeed += GiveGlarpCactusSeed; Destroy(gameObject); }
+        if (MM.Space <= MM.MaxSpace) { MM.Cronalean += GiveCronalean;  Destroy(gameObject); }
+        if (MM.Space <= MM.MaxSpace) { MM.Twertapop += GiveTwertapop; Destroy(gameObject); }
+        if (MM.Space <= MM.MaxSpace) { MM.Plaronloss += GivePlaronloss; Destroy(gameObject); }
+
+        if (MM.Space <= MM.MaxSpace) { MM.BottledCronalean += GiveBottledCronalean; Destroy(gameObject); }
+        if (MM.Space <= MM.MaxSpace) { MM.BottledTwertapop += GiveBottledTwertapop; Destroy(gameObject); }
+        if (MM.Space <= MM.MaxSpace) { MM.BottledPlaronloss += GiveBottledPlaronloss; Destroy(gameObject); }
 
         if (MM.Space <= MM.MaxSpace) { MM.Bottle += GiveBottle; Destroy(gameObject); }
 
-        if (MM.Space <= MM.MaxSpace) { MM.SeedStorage += GiveSeedStorage; Destroy(gameObject); }
-        if (MM.Space <= MM.MaxSpace) { MM.FruitStorage += GiveFruitStorage; Destroy(gameObject); }
-        if (MM.Space <= MM.MaxSpace) { MM.WeaponLocker += GiveWeaponLocker; Destroy(gameObject); }
-
-        if (MM.Space <= MM.MaxSpace) { MM.Planter += GivePlanter; Destroy(gameObject); }
         if (MM.Space <= MM.MaxSpace) { MM.Squashor += GiveSquashor; Destroy(gameObject); }
         if (MM.Space <= MM.MaxSpace) { MM.Radiator += GiveRadiator; Destroy(gameObject); }
     }
