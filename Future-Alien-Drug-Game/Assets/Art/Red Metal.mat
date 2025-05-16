@@ -160,9 +160,9 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Main_Color: {r: 0.3679245, g: 0.30371127, b: 0.30371127, a: 0}
-    - _Second_Color: {r: 0.18867922, g: 0.15530436, b: 0.1219295, a: 0}
+    - _Main_Color: {r: 0.4245283, g: 0.36566603, b: 0.34242612, a: 0}
+    - _Second_Color: {r: 0.18627624, g: 0.22706479, b: 0.24528301, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _Third_Color: {r: 0.18823531, g: 0.15686275, b: 0.121568635, a: 0}
+    - _Third_Color: {r: 0.18823531, g: 0.227451, b: 0.24705884, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

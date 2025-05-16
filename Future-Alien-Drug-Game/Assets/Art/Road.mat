@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Mesh
+  m_Name: Road
   m_Shader: {fileID: -6465566751694194690, guid: c663803a475bee042a3057c9ee8b4958,
     type: 3}
   m_Parent: {fileID: 0}
@@ -54,7 +54,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Main_Texture:
-        m_Texture: {fileID: 2800000, guid: c3ebaaa5b5f93c84e9d1c12fe01915d7, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9eef5aca90433fd48a0d4cfb77a4281f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -62,7 +62,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Metallic_Texture:
-        m_Texture: {fileID: 2800000, guid: 9eef5aca90433fd48a0d4cfb77a4281f, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -74,11 +74,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Second_Texture:
-        m_Texture: {fileID: 2800000, guid: 491067e18e540e647876bf4eeb54086a, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3545c027a842a6b4bb4e845eb0f82ebb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Smoothness_Texture:
-        m_Texture: {fileID: 2800000, guid: 9eef5aca90433fd48a0d4cfb77a4281f, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
@@ -86,11 +86,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Spred_Texture:
-        m_Texture: {fileID: 2800000, guid: 9eef5aca90433fd48a0d4cfb77a4281f, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Third_Texture:
-        m_Texture: {fileID: 2800000, guid: de19ea2705e5b03489c932ea1dad245d, type: 3}
+        m_Texture: {fileID: 2800000, guid: 4491ac5236a543041bc3c56707880e82, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -125,8 +125,8 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _Main_Tile: 0.4
-    - _Metallic: 0.1
+    - _Main_Tile: 0.2
+    - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueControl: 0
@@ -140,20 +140,20 @@ Material:
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
-    - _Third_Tile: 0.4
+    - _Third_Tile: 0.2
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Main_Color: {r: 0.3679245, g: 0.3210662, b: 0.3210662, a: 1}
-    - _Second_Color: {r: 0.36862743, g: 0.30196077, b: 0.30196077, a: 1}
+    - _Main_Color: {r: 0.21698111, g: 0.21698111, b: 0.21698111, a: 0}
+    - _Second_Color: {r: 0.1509434, g: 0.1509434, b: 0.1509434, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _Third_Color: {r: 0.36862746, g: 0.3019608, b: 0.3019608, a: 0}
+    - _Third_Color: {r: 0.14901961, g: 0.14901961, b: 0.14901961, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &8763145098702494044
+--- !u!114 &7509782186190481699
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
