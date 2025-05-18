@@ -1,101 +1,125 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+[System.Serializable]
 
 public class Inventory : MonoBehaviour
 {
     public GameObject mainManager;
     MainManager MM;
-    [Space]
+
     public GameObject mainCamera;
     PlayerCam MC;
 
     public GameObject GUI;
+    public GameObject Hand;
     public GameObject Pad;
     public GameObject Player;
-
-    public int openRange;
     public bool UIOpen;
 
     public Transform Content;
 
-    public GameObject PreCronaSeed;
-    public GameObject PreTwertaSeed;
-    public GameObject PrePlaronSeed;
+    public GameObject CronaSeed;
+    public GameObject PlaronSeed;
+    public GameObject TwertaSeed;
 
-    public GameObject PreCronalean;
-    public GameObject PreTwertapop;
-    public GameObject PrePlaronloss;
+    public GameObject Bottle;
 
-    public GameObject PreBottledCronalean;
-    public GameObject PreBottledTwertapop;
-    public GameObject PreBottledPlaronloss;
+    public GameObject Cronalean;
+    public GameObject Twertapop;
+    public GameObject Plaronloss;
 
-    public GameObject PreBottle;
+    public GameObject BottledCronalean;
+    public GameObject BottledTwertapop;
+    public GameObject BottledPlaronloss;
 
+    [System.Serializable]
+    public class InventoryItem
+    {
+        public string tag;
+        public GameObject prefab;
+        public int previousAmount;
+        public System.Func<int> GetAmount;
+    }
 
-    public GameObject PrePlanter;
-    public GameObject PreSquashor;
-    public GameObject PreRadiator;
-
-    public GameObject PreBat;
-    public GameObject PrePan;
-    public GameObject PreGloves;
-
-    public GameObject PrePistol;
-    public GameObject PreRevolver;
-    public GameObject PreTeaser;
-
-    public int CronaSeedPre;
-    public int TwertaSeedPre;
-    public int PlaronSeedPre;
-
-    public int CronaleanPre;
-    public int TwertapopPre;
-    public int PlaronlossPre;
-
-    public int BottledCronaleanPre;
-    public int BottledTwertapopPre;
-    public int BottledPlaronlossPre;
-
-    public int BottlePre;
-
-    public int SeedStoragePre;
-    public int FruitStoragePre;
-    public int WeaponLockerPre;
-
-    public int PlanterPre;
-    public int SquashorPre;
-    public int RadiatorPre;
-
-    public int BatPre;
-    public int PanPre;
-    public int GlovesPre;
-
-    public int PistolPre;
-    public int RevolverPre;
-    public int TeaserPre;
-
-    public int MaxSpacePre;
-    public int SpacePre;
+    public List<InventoryItem> items = new List<InventoryItem>();
 
     void Start()
     {
         MM = mainManager.GetComponent<MainManager>();
         MC = mainCamera.GetComponent<PlayerCam>();
         GUI.SetActive(false);
+
+        items.Add(new InventoryItem
+        {
+            tag = "CronaSeed",
+            prefab = CronaSeed,
+            GetAmount = () => MM.CronaSeed
+        });
+        items.Add(new InventoryItem
+        {
+            tag = "PlaronSeed",
+            prefab = PlaronSeed,
+            GetAmount = () => MM.PlaronSeed
+        });
+        items.Add(new InventoryItem
+        {
+            tag = "TwertaSeed",
+            prefab = TwertaSeed,
+            GetAmount = () => MM.TwertaSeed
+        });
+
+        items.Add(new InventoryItem
+        {
+            tag = "Bottle",
+            prefab = Bottle,
+            GetAmount = () => MM.Bottle
+        });
+
+        items.Add(new InventoryItem
+        {
+            tag = "Cronalean",
+            prefab = Cronalean,
+            GetAmount = () => MM.Cronalean
+        });
+        items.Add(new InventoryItem
+        {
+            tag = "Twertapop",
+            prefab = Twertapop,
+            GetAmount = () => MM.Twertapop
+        });
+        items.Add(new InventoryItem
+        {
+            tag = "Plaronloss",
+            prefab = Plaronloss,
+            GetAmount = () => MM.Plaronloss
+        });
+
+        items.Add(new InventoryItem
+        {
+            tag = "BottledCronalean",
+            prefab = BottledCronalean,
+            GetAmount = () => MM.BottledCronalean
+        });
+        items.Add(new InventoryItem
+        {
+            tag = "BottledTwertapop",
+            prefab = BottledTwertapop,
+            GetAmount = () => MM.BottledTwertapop
+        });
+        items.Add(new InventoryItem
+        {
+            tag = "BottledPlaronloss",
+            prefab = BottledPlaronloss,
+            GetAmount = () => MM.BottledPlaronloss
+        });
+
     }
 
     void Update()
     {
-
         if (Input.GetKey(KeyCode.Escape) && UIOpen)
         {
-            UIOpen = false;
-            GUI.SetActive(false);
-            Pad.SetActive(false);
-            Cursor.lockState = CursorLockMode.Locked;
-            MC.enabled = true;
+            Close();
         }
 
         if (Input.GetKeyDown(KeyCode.Tab))
@@ -103,84 +127,29 @@ public class Inventory : MonoBehaviour
             Open();
         }
 
-        if (MM.CronaSeed > CronaSeedPre)
+        foreach (var item in items)
         {
-            Instantiate(PreCronaSeed, Content);
+            if (item.GetAmount == null)
+            {
+                Debug.LogWarning($"GetAmount function is null for item with tag: {item.tag}");
+                continue;
+            }
+
+            int current = item.GetAmount();
+
+            if (current > item.previousAmount)
+            {
+                Instantiate(item.prefab, Content).tag = item.tag;
+            }
+            else if (current < item.previousAmount)
+            {
+                RemoveItem(item.tag);
+            }
+
+            item.previousAmount = current;
         }
-        CronaSeedPre = MM.CronaSeed;
-        if (MM.CronaSeed < CronaSeedPre) { RemoveItem("CronaSeed"); }
-
-        if (MM.TwertaSeed > TwertaSeedPre)
-        {
-            Instantiate(PreTwertaSeed, Content);
-        }
-        TwertaSeedPre = MM.TwertaSeed;
-        if (MM.TwertaSeed < TwertaSeedPre) { RemoveItem("TwertaSeed"); }
-
-        if (MM.PlaronSeed > PlaronSeedPre)
-        {
-            Instantiate(PrePlaronSeed, Content);
-        }
-        PlaronSeedPre = MM.PlaronSeed;
-        if (MM.PlaronSeed < PlaronSeedPre) { RemoveItem("PlaronSeed"); }
-
-
-
-
-        if (MM.Cronalean > CronaleanPre)
-        {
-            Instantiate(PreCronalean, Content);
-        }
-        if (MM.Cronalean < CronaleanPre) { RemoveItem("Cronalean"); }
-        CronaleanPre = MM.Cronalean;
-
-        if (MM.Twertapop > TwertapopPre)
-        {
-            Instantiate(PreTwertapop, Content);
-        }
-        TwertapopPre = MM.Twertapop;
-        if (MM.Twertapop < TwertapopPre) { RemoveItem("Twertapop"); }
-
-        if (MM.Plaronloss > PlaronlossPre)
-        {
-            Instantiate(PrePlaronloss, Content);
-        }
-        PlaronlossPre = MM.Plaronloss;
-        if (MM.Plaronloss < PlaronlossPre) { RemoveItem("Plaronloss"); }
-
-
-
-        if (MM.BottledCronalean > BottledCronaleanPre)
-        {
-            Instantiate(PreBottledCronalean, Content);
-        }
-        BottledCronaleanPre = MM.BottledCronalean;
-        if (MM.BottledCronalean < BottledCronaleanPre) { RemoveItem("BottledCronalean"); }
-
-        if (MM.BottledTwertapop > BottledTwertapopPre)
-        {
-            Instantiate(PreBottledTwertapop, Content);
-        }
-        BottledTwertapopPre = MM.BottledTwertapop;
-        if (MM.BottledTwertapop < BottledTwertapopPre) { RemoveItem("BottledTwertapop"); }
-
-
-        if (MM.BottledPlaronloss > BottledPlaronlossPre)
-        {
-            Instantiate(PreBottledPlaronloss, Content);
-        }
-        BottledPlaronlossPre = MM.BottledPlaronloss;
-        if (MM.BottledPlaronloss < BottledPlaronlossPre) { RemoveItem("BottledPlaronloss"); }
-
-
-        if (MM.Bottle > BottlePre)
-        {
-            Instantiate(PreBottle, Content);
-        }
-        if (MM.Bottle < BottlePre) { RemoveItem("Bottle"); }
-        BottlePre = MM.Bottle;
-
     }
+
     public void RemoveItem(string tagname)
     {
         for (int i = 0; i < Content.childCount; i++)
@@ -189,7 +158,6 @@ public class Inventory : MonoBehaviour
             if (child.tag == tagname)
             {
                 Destroy(child.gameObject);
-                print("Removed");
                 return;
             }
         }
@@ -197,13 +165,24 @@ public class Inventory : MonoBehaviour
 
     public void Open()
     {
-        MC = mainCamera.GetComponent<PlayerCam>();
-        MM = mainManager.GetComponent<MainManager>();
-
         UIOpen = true;
         Pad.SetActive(true);
         GUI.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
         MC.enabled = false;
+
+        foreach (Transform child in Hand.transform)
+        {
+            child.gameObject.SetActive(false);
+        }
+    }
+
+    public void Close()
+    {
+        UIOpen = false;
+        GUI.SetActive(false);
+        Pad.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
+        MC.enabled = true;
     }
 }

@@ -71,10 +71,10 @@ MonoBehaviour:
   mainManager: {fileID: 0}
   pickUpRange: 5
   GiveCronaSeed: 0
-  GiveTwertaSeed: 0
+  GiveTwertaSeed: 1
   GivePlaronSeed: 0
   GiveCronalean: 0
-  GiveTwertapop: 1
+  GiveTwertapop: 0
   GivePlaronloss: 0
   GiveBottledCronalean: 0
   GiveBottledTwertapop: 0

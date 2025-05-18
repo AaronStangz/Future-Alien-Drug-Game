@@ -4,25 +4,32 @@ using UnityEngine;
 
 public class TwertaSeedInv : MonoBehaviour
 {
-    public GameObject TwertaSeedHand;
-    public GameObject Hand;
+    public GameObject TwertaSeedHandObj;
+    //public GameObject Hand;
+
+    public string TwertaSeedName = " TwertaSeedHand"; // <- The name of the item you're looking for
 
     void Start()
     {
-        Hand = FindInactiveObject("Hand");
+        Find(TwertaSeedName);
     }
 
     void Update()
     {
-
+        if (TwertaSeedHandObj == null)
+        {
+            Find(TwertaSeedName);
+        }
     }
 
-    public static GameObject FindInactiveObject(string name)
+    public static GameObject FindInactiveObject(string objectName)
     {
         GameObject[] allObjects = Resources.FindObjectsOfTypeAll<GameObject>();
         foreach (GameObject obj in allObjects)
         {
-            if (obj.name == name && !obj.hideFlags.HasFlag(HideFlags.NotEditable) && !obj.hideFlags.HasFlag(HideFlags.HideAndDontSave))
+            if (obj.name == objectName &&
+                !obj.hideFlags.HasFlag(HideFlags.NotEditable) &&
+                !obj.hideFlags.HasFlag(HideFlags.HideAndDontSave))
             {
                 return obj;
             }
@@ -30,13 +37,26 @@ public class TwertaSeedInv : MonoBehaviour
         return null;
     }
 
-    public void Hold()
+    public void Hold(string objectName)
     {
-        TwertaSeedHand = FindInactiveObject("TwertaSeedHand");
-        if (TwertaSeedHand != null)
+        Action();
+    }
+
+    public void Find(string objectName)
+    {
+        TwertaSeedHandObj = FindInactiveObject(TwertaSeedName);
+    }
+
+    public void Action()
+    {
+        if (TwertaSeedHandObj != null)
         {
-            Hand.SetActive(true);
-            TwertaSeedHand.SetActive(true);
+            Debug.Log("Holding");
+            TwertaSeedHandObj.SetActive(true);
+        }
+        else
+        {
+            Debug.LogWarning("Hand or  TwertaSeedHandObj not found.");
         }
     }
 }

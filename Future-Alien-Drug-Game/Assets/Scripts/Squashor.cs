@@ -17,7 +17,7 @@ public class Squashor : MonoBehaviour
     public GameObject GUI;
 
     public bool BottleCronaleanRunning;
-    public bool BottledTwertapopRunning;
+    public bool BottleTwertapopRunning;
     public bool BottledPlaronlossRunning;
 
     public float BottleCronaleanTime;
@@ -91,15 +91,15 @@ public class Squashor : MonoBehaviour
             MM.BottledCronalean += 1;
     }
 
-    public void BottledTwertapopST()
+    public void BottleTwertapopST()
     {
-        if (MM.Twertapop >= 1 && MM.Bottle >= 1 && !BottledTwertapopRunning ) StartCoroutine(BottledTwertapopTimer());
+        if (MM.Twertapop >= 1 && MM.Bottle >= 1 && !BottleTwertapopRunning ) StartCoroutine(BottleTwertapopTimer());
         Debug.Log("Start");
     }
-    IEnumerator BottledTwertapopTimer()
+    IEnumerator BottleTwertapopTimer()
     {
         float Ttimer = 0;
-        BottledTwertapopRunning = true;
+        BottleTwertapopRunning = true;
 
         MM.Bottle -= 1;
         MM.Twertapop -= 1;
@@ -112,41 +112,41 @@ public class Squashor : MonoBehaviour
             BottleTwertapopSlider.value = realValue; 
             yield return null;
         }
-        BottledTwertapopRunning = false;
-        BottledTwertapop();
+        BottleTwertapopRunning = false;
+        BottleTwertapop();
     }
-    public void BottledTwertapop()
+    public void BottleTwertapop()
     {
             MM.BottledTwertapop += 1;
     }
 
-    public void BottledPlaronlossST()
+    public void BottlePlaronlossST()
     {
-        if (MM.Plaronloss >= 1 && MM.Bottle >= 1 && !BottledPlaronlossRunning) StartCoroutine(BottledPlaronlossTimer());
+        if (MM.Twertapop >= 1 && MM.Bottle >= 1 && !BottledPlaronlossRunning) StartCoroutine(BottlePlaronlossTimer());
         Debug.Log("Start");
     }
-    IEnumerator BottledPlaronlossTimer()
+    IEnumerator BottlePlaronlossTimer()
     {
-        float Ptimer = 0;
+        float Ttimer = 0;
         BottledPlaronlossRunning = true;
 
         MM.Bottle -= 1;
-        MM.Plaronloss -= 1;
+        MM.Twertapop -= 1;
 
-        while (Ptimer < BottleTwertapopTime)
+        while (Ttimer < BottlePlaronlossTime)
         {
-            Ptimer += Time.deltaTime;
+            Ttimer += Time.deltaTime;
 
-            float realValue = Ptimer / BottlePlaronlossTime;
-            BottlePlaronlossSlider.value = realValue; 
+            float realValue = Ttimer / BottlePlaronlossTime;
+            BottlePlaronlossSlider.value = realValue;
             yield return null;
         }
         BottledPlaronlossRunning = false;
-        BottledPlaronloss();
+        BottlePlaronloss();
     }
-    public void BottledPlaronloss()
+    public void BottlePlaronloss()
     {
-            MM.BottledPlaronloss += 1;
+        MM.BottledPlaronloss += 1;
     }
 
 }

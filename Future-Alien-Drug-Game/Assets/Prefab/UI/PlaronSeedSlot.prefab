@@ -51,8 +51,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4352e576ba42154882ec052bc86e0ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlaronSeedHand: {fileID: 0}
-  Hand: {fileID: 0}
+  PlaronSeedHandObj: {fileID: 0}
+  PlaronSeedHandPre: {fileID: 0}
+  mainManager: {fileID: 0}
+  PlaronSeedName: PlaronSeedHand
 --- !u!1 &1514820040212916616
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,16 +250,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 183571504034988036}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: -3501959295514821764}
+        m_TargetAssemblyTypeName: PlaronSeedInv, Assembly-CSharp
+        m_MethodName: Hold
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: PlaronSeedHand
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &3245924441453618081
